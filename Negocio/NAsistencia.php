@@ -26,7 +26,7 @@ class NAsistencia {
         $alumnos = $this->DDocente->mostrarAlumnos($idGrupo);
         foreach ($alumnos as $key => $value) {
             $this->DDetalleAsistencia->setIdAsistencia($idAsistencia);
-            $this->DDetalleAsistencia->setIdInscripcion($value["idInscripcion"]);
+            $this->DDetalleAsistencia->setIdInscripcion($value["idinscripcion"]);
             $this->DDetalleAsistencia->setIdGrupo($idGrupo);
             $this->DDetalleAsistencia->setMarcacion(0);
             $this->DDetalleAsistencia->registrar();
