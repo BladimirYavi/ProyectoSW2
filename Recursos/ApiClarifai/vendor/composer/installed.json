@@ -1,0 +1,145 @@
+[
+    {
+        "name": "clarifai/clarifai-php",
+        "version": "0.6.1",
+        "version_normalized": "0.6.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Clarifai/clarifai-php.git",
+            "reference": "764cac58e396bfc2e8ecceedb0f25e43ecd5d265"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Clarifai/clarifai-php/zipball/764cac58e396bfc2e8ecceedb0f25e43ecd5d265",
+            "reference": "764cac58e396bfc2e8ecceedb0f25e43ecd5d265",
+            "shasum": ""
+        },
+        "require": {
+            "google/protobuf": "^v3.6.0.1",
+            "grpc/grpc": "^1.12.0",
+            "php": ">=7.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=6"
+        },
+        "time": "2019-05-30T16:38:59+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Clarifai\\": [
+                    "src/protos/Clarifai",
+                    "src/Clarifai"
+                ],
+                "GPBMetadata\\": [
+                    "src/protos/GPBMetadata"
+                ]
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Clarifai",
+                "homepage": "https://github.com/Clarifai/clarifai-php"
+            }
+        ],
+        "description": "Clarifai PHP Client",
+        "homepage": "https://clarifai.com/",
+        "keywords": [
+            "api",
+            "artificial intelligence",
+            "clarifai",
+            "image recognition",
+            "video recognition"
+        ]
+    },
+    {
+        "name": "google/protobuf",
+        "version": "v3.9.1",
+        "version_normalized": "3.9.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/protocolbuffers/protobuf-php.git",
+            "reference": "4bb1a332b47f618a0a21ad3cc9a43f1c4aaa5b62"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/4bb1a332b47f618a0a21ad3cc9a43f1c4aaa5b62",
+            "reference": "4bb1a332b47f618a0a21ad3cc9a43f1c4aaa5b62",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=4.8.0"
+        },
+        "suggest": {
+            "ext-bcmath": "Need to support JSON deserialization"
+        },
+        "time": "2019-08-06T17:47:34+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Google\\Protobuf\\": "src/Google/Protobuf",
+                "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "proto library for PHP",
+        "homepage": "https://developers.google.com/protocol-buffers/",
+        "keywords": [
+            "proto"
+        ]
+    },
+    {
+        "name": "grpc/grpc",
+        "version": "1.22.0",
+        "version_normalized": "1.22.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/grpc/grpc-php.git",
+            "reference": "88235e786ef9b55fcb049f00c5c5202f8086a299"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/grpc/grpc-php/zipball/88235e786ef9b55fcb049f00c5c5202f8086a299",
+            "reference": "88235e786ef9b55fcb049f00c5c5202f8086a299",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "google/auth": "^v1.3.0"
+        },
+        "suggest": {
+            "ext-protobuf": "For better performance, install the protobuf C extension.",
+            "google/protobuf": "To get started using grpc quickly, install the native protobuf library."
+        },
+        "time": "2019-07-03T19:57:39+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Grpc\\": "src/lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "description": "gRPC library for PHP",
+        "homepage": "https://grpc.io",
+        "keywords": [
+            "rpc"
+        ]
+    }
+]
