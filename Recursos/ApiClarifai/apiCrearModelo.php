@@ -15,23 +15,23 @@ use Clarifai\DTOs\Inputs\ClarifaiFileImage;
 $client = new ClarifaiClient('f1095b8a786a45ee9096f369ffa2b658');
 //  new ClarifaiFileImage(file_get_contents($target_dir))
 
-$client->addConcepts([new Concept('Jennifer Aniston')])
+$client->addConcepts([new Concept('fff')])
     ->executeSync();
 
 $client->addInputs([
-    (new ClarifaiFileImage(file_get_contents('images/2074558937_1568337896.jpg')))
-    // (new ClarifaiURLImage('https://actualidadfitness.com/wp-content/uploads/2018/12/Jennifer Aniston-en-ayunas-3-1.jpg'))
-        ->withPositiveConcepts([new Concept('Jennifer Aniston')]),
+    (new ClarifaiFileImage(file_get_contents('images/119242587_1570609166.jpg')))
+    // (new ClarifaiURLImage('https://actualidadfitness.com/wp-content/uploads/2018/12/fff-en-ayunas-3-1.jpg'))
+        ->withPositiveConcepts([new Concept('fff')]),
     (new ClarifaiURLImage('https://images-na.ssl-images-amazon.com/images/I/61951YPTr7L._SX466_.jpg'))
-        ->withNegativeConcepts([new Concept('Jennifer Aniston')])
+        ->withNegativeConcepts([new Concept('fff')])
 ])
     ->executeSync();
 
-$client->modifyModel('personas')          ////modifyModel(idModel) ->modifica el modelo en el cual se le agrega el nuevo concepto  . SI se usa createModel no te lo va a agregar el nuevo concepto  al modelo para eso usas el modifyModel.
-    ->withConcepts([new Concept('Jennifer Aniston')])
+$client->modifyModel('persona')          ////modifyModel(idModel) ->modifica el modelo en el cual se le agrega el nuevo concepto  . SI se usa createModel no te lo va a agregar el nuevo concepto  al modelo para eso usas el modifyModel.
+    ->withConcepts([new Concept('fff')])
     ->executeSync();
 
-$response = $client->trainModel(ModelType::concept(), 'personas')
+$response = $client->trainModel(ModelType::concept(), 'persona')
     ->executeSync();
 
 if ($response->isSuccessful()) {

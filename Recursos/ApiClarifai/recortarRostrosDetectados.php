@@ -10,7 +10,7 @@ use Clarifai\DTOs\Searches\SearchInputsResult;
 use Clarifai\DTOs\Models\ModelType;
 use Clarifai\DTOs\Inputs\ClarifaiFileImage;
 
-$client = new ClarifaiClient('f1095b8a786a45ee9096f369ffa2b658');//f1095b8a786a45ee9096f369ffa2b658
+$client = new ClarifaiClient('31fe799d55b94229b9e857d44ee24465');//f1095b8a786a45ee9096f369ffa2b658
 
 
 $target_dir="images";

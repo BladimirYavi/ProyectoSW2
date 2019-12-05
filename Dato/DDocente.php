@@ -70,7 +70,7 @@ class DDocente {
 
    public function mostrar(){
 		$stmt = $this->conexion->conectar()->prepare(
-         "SELECT * FROM docente WHERE estado =1"
+         "SELECT * FROM docente WHERE estado =1 ORDER BY id ASC"
       );
 		$stmt -> execute();
 		return $stmt -> fetchAll(PDO::FETCH_ASSOC);

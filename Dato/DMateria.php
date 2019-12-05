@@ -58,7 +58,7 @@ class DMateria {
 
     public function mostrar(){
         $stmt = $this->conexion->conectar()->prepare(
-            "SELECT * FROM materia WHERE estado = 1"
+            "SELECT * FROM materia WHERE estado = 1 ORDER BY id ASC"
         );
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

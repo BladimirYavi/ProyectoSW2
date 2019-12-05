@@ -23,11 +23,11 @@ function  agregarAlumnoApi($path, $alumno){
     ])
         ->executeSync();
 
-    $client->modifyModel('personas')          ////modifyModel(idModel) ->modifica el modelo en el cual se le agrega el nuevo concepto  . SI se usa createModel no te lo va a agregar el nuevo concepto  al modelo para eso usas el modifyModel.
+    $client->modifyModel('persona')          ////modifyModel(idModel) ->modifica el modelo en el cual se le agrega el nuevo concepto  . SI se usa createModel no te lo va a agregar el nuevo concepto  al modelo para eso usas el modifyModel.
         ->withConcepts([new Concept($alumno)])
         ->executeSync();
 
-    $response = $client->trainModel(ModelType::concept(), 'personas')
+    $response = $client->trainModel(ModelType::concept(), 'persona')
         ->executeSync();
 
     // if ($response->isSuccessful()) {

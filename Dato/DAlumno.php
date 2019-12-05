@@ -64,7 +64,7 @@ class DAlumno {
     }
 
     public function mostrar(){
-        $sql =  "SELECT * FROM alumno WHERE estado = 1";
+        $sql =  "SELECT * FROM alumno WHERE estado = 1 ORDER BY id ASC";
         $stmt = $this->conexion->conectar()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

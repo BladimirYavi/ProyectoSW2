@@ -6,6 +6,10 @@ class Conexion{
         $dbname 	= "d32br04ka132tr";
         $usuario 	= "syujivhbfoulgi";
         $password	= "8e5ceb4085d0ab99c9ee8e607885d2ea41b8870fca2c0f241534c6bc7599c0ad";
+        // $host		= "localhost";
+        // $dbname 	= "asistencia";
+        // $usuario 	= "postgres";
+        // $password	= "7991";
 
         $link = new PDO("pgsql:host=$host;dbname=$dbname",$usuario,$password);
         return $link;
