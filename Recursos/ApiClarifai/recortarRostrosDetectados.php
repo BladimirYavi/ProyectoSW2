@@ -59,7 +59,7 @@ if(move_uploaded_file($_FILES['image']['tmp_name'],$target_dir)){
             imagedestroy($src_img);
             imagedestroy($dst_img);
 
-            $response = $client->predict(ModelType::concept(), 'persona',
+            $response = $client->predict(ModelType::concept(), 'alumnos',
             new ClarifaiFileImage(file_get_contents($target_dir)))
             ->executeSync();
 
